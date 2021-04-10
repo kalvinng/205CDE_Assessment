@@ -1,0 +1,23 @@
+{% extends "navbar.html" %}
+{% block content %}
+	<!-- table displaying all the items in a cart -->
+	<h2>{{ session['Name'] }}'s ordered list</h2>
+	<table class="table table-hover order-item">
+		<thead class="order-item">
+			<tr class="order-item">
+				<th>Product Name</th>
+				<th>Product Price</th>
+				<th>Order Date</th>
+			</tr>
+		</thead>
+		<tbody class="order-item">
+			{% for result in results %}
+				<tr class="order-item">
+					<td>{{ result[2] }}</td>
+					<td>${{ result[3] }}</td>
+					<td>{{ result[4] }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock content %}

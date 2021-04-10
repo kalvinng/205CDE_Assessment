@@ -1,0 +1,47 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 20px;
+	align-items: center;
+	grid-row: 1;
+	margin: auto;
+	padding: 10px;
+}
+
+.grid-item {
+	font-size: 20px;
+	text-align: center;
+	border: 5px solid;
+	border-radius: 20px;
+	max-width: 100%;
+}
+
+.grid-img-container {
+	height: 300px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.grid-img {
+	border-radius: 10px;
+	height: 100%;
+	max-width: 100%
+}
+
+.product {
+	height: 100%;
+}
+
+.product > .grid-container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 'pic pic desc desc desc';
+}
+
+.product-gridimg {
+	grid-area: pic;
+}
+
+.product-griddesc {
+	grid-area: desc;
+}

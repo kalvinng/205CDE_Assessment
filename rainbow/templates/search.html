@@ -1,0 +1,21 @@
+{% extends "navbar.html" %}
+{% block content %}
+	{% if hkey[0] == '' %}
+	<h2>Search Results for all products</h2>
+	{% else %}
+    <h2>Search Results for {{ hkey[0] }}</h2>
+    {% endif %}
+	<div class="grid-container">
+		{% for result in results %}
+			<a href="{{ url_for('products', item_id=result[0]) }}">
+				<div class="grid-item">
+					<div class="grid-img-container">
+						<img class="grid-img" src="{{ url_for('static',filename=result[4]) }}"/><br>
+					</div>
+					{{ result[2] }}<br>
+					${{ result[6] }}
+				</div>
+			</a>
+		{% endfor %}
+	</div>
+{% endblock content %}

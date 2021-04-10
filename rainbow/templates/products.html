@@ -1,0 +1,23 @@
+{% extends "navbar.html" %}
+{% block content %}
+<div class="container">
+	<div class="product">
+		<div class="grid-container">
+			<div class="product-gridimg">
+				<img class="grid-img" src="{{ url_for('static',filename=results[0][4]) }}"/>
+			</div>
+			<div class="product-griddesc">
+				<h2>{{ results[0][2] }}</h2>
+				<h5>{{ results[0][5] }} in stock</h5>
+				<h5>Price: ${{ results[0][6] }}</h5>
+				<br>
+				<p>Product details: {{ results[0][3] }}</p>
+		        {% if session['Name'] %}
+					<br>
+					<a href="{{ url_for('addcart', acc_id = session['AccountID'], item_id = results[0][0]) }}">Order Now!</a>
+		        {% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

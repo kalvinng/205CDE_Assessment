@@ -1,0 +1,38 @@
+.nav-item, .dropdown-item, .user-login, .nav-link {
+	color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: height 500ms;
+}
+
+.admin-loginmessage {
+    margin: auto;
+    font-size: 16px;
+    text-align: right;
+}
+
+.table a {
+    display: block;
+    text-decoration: none;
+}
+
+.adminform {
+    margin: auto;
+    width: 350px;
+    border: solid 5px;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.form-btn {
+    text-align: center;
+    border: solid 5px;
+    border-radius: 15px;
+}
+
+@keyframes Alertdis {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}

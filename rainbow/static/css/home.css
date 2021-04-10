@@ -1,0 +1,33 @@
+.searchproducts {
+    font-size: 40px;
+}
+
+.searchtext {
+    width: 300px;
+    transition: width 0.5s;
+    outline: none;
+    border: 2px solid;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.searchtext:hover {
+    width: 300px;
+}
+
+.searchbtn {
+    width: 100px;
+    outline: none;
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.container {
+    height: 100%;
+}
+
+.intro {
+    font-size: 30px;
+}

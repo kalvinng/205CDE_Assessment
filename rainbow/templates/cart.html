@@ -1,0 +1,34 @@
+{% extends "navbar.html" %}
+{% block content %}
+	<!-- table displaying all the items in a cart -->
+	<h2>{{ session['Name'] }}'s shopping cart</h2>
+	<table class="table table-hover order-item">
+		<thead class="order-item">
+			<tr class="order-item">
+				<th>Product Name</th>
+				<th>Product Price</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody class="order-item">
+			{% for result in results %}
+				<tr class="order-item">
+					<td>{{ result[3] }}</td>
+					<td>${{ result[4] }}</td>
+					<td><a href="{{ url_for('cart_delete', cart_id = result[0], acc_id = result[1]) }}">Delete</a></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% if len(results) == 0 %}
+	{% else %}
+	<div class="totalamount">
+		<div class="total-price">
+			Total price: ${{ total }}
+		</div>
+		<div class="ordercart">
+			<a class="addorderbtn" href="{{ url_for('addorders', acc_id = session['AccountID']) }}">Order</a>
+		</div>
+	</div>
+	{% endif%}
+{% endblock content %}

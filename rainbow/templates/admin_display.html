@@ -1,0 +1,69 @@
+{% extends "admin_main.html" %}
+{% block content %}
+	<div class="container">
+		<!-- table title -->
+		<h2 align="center">
+			{% if mode == "accounts" %}
+				<strong>Manage Accounts</strong>
+			{% elif mode == "products" %}
+				<strong>Manage Products</strong>
+			{% elif mode == "orders" %}
+				<strong>Manage Orders</strong>
+			{% endif %}
+		</h2>
+
+		<!-- table displaying all the items in a database -->
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					{% if mode == "accounts" %}
+						{% for field in field_names %}
+							<th>{{ field[0] }}</th>
+						{% endfor %}
+					{% elif mode == "products" %}
+						{% for field in field_names %}
+							<th>{{ field[0] }}</th>
+						{% endfor %}
+					{% elif mode == "orders" %}
+						{% for field in field_names %}
+							<th>{{ field[0] }}</th>
+						{% endfor %}
+					{% endif %}
+				</tr>
+			</thead>
+			<tbody>
+				{% if mode == "accounts"  %}
+					{% for result in results %}
+						<tr>
+							{% for value in result %}
+								<td>{{ value }}</td>
+							{% endfor %}
+							<td><a href="{{ url_for('admin_edit', mode='accounts', item_id=result[0]) }}">Edit</a></td>
+							<td><a href="{{ url_for('admin_delete', mode='accounts', item_id=result[0]) }}">Delete</a></td>
+						</tr>
+					{% endfor %}
+
+				{% elif mode == "products"  %}
+					{% for result in results %}
+						<tr>
+							{% for value in result %}
+								<td>{{ value }}</td>
+							{% endfor %}
+							<td><a href="{{ url_for('admin_edit', mode='products', item_id=result[0]) }}">Edit</a></td>
+							<td><a href="{{ url_for('admin_delete', mode='products', item_id=result[0]) }}">Delete</a></td>
+						</tr>
+					{% endfor %}
+				{% elif mode == "orders"  %}
+					{% for result in results %}
+						<tr>
+							{% for value in result %}
+								<td>{{ value }}</td>
+							{% endfor %}
+							<td><a href="{{ url_for('admin_delete', mode='orders', item_id=result[0]) }}">Cancel</a></td>
+						</tr>
+					{% endfor %}
+				{% endif %}
+			</tbody>
+		</table>
+	</div>
+{% endblock content %}

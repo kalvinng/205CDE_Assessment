@@ -1,0 +1,60 @@
+.nav-link {
+    padding: 10px;
+}
+
+.navbar-brand {
+    margin-right: 30px;
+}
+
+.navitem {
+    margin-top: -10px;
+}
+
+nav {
+    font-size: 20px;
+    height: 120px;
+    z-index: 10;
+}
+
+.navbar-collapse {
+    margin-left: -20px;
+    margin-right: -15px;
+    padding-left: 20px;
+}
+
+.dropdown:hover .dropdown-menu {
+    margin-top: -10px;
+    margin-left: -20px;
+    display: block;
+    border: transparent;
+    transition: height 500ms;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+html, body {
+    height: 100%;
+}
+
+@keyframes Alertdis {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.user-loginmessage {
+    margin: auto;
+    font-size: 16px;
+    text-align: right;
+}
+
+footer {
+    position: fixed;
+    clear: both;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

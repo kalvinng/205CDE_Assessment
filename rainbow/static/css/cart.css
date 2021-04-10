@@ -1,0 +1,38 @@
+.order-item {
+	border: 2px solid;
+}
+
+.totalamount {
+	clear: both;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	border-top: 2px solid;
+	text-align: center;
+	height: 15%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 'total total total total orderbtn';
+}
+
+.total-price {
+	grid-area: total;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.ordercart {
+	grid-area: orderbtn;
+	margin-top: 20px;
+}
+
+.addorderbtn {
+    font-size: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 3px solid;
+	border-radius: 30px;
+}

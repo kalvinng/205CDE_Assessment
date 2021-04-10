@@ -1,0 +1,29 @@
+{% extends "navbar.html" %}
+{% block content %}
+	{% if category == "t_shirts" %}
+	<h1 align="center"><strong>T-Shirts</strong></h1>
+	{% elif category == "shoes" %}
+	<h1 align="center"><strong>Shoes</strong></h1>
+	{% elif category == "trackpants" %}
+	<h1 align="center"><strong>Trackpants</strong></h1>
+	{% elif category == "socks" %}
+	<h1 align="center"><strong>Socks</strong></h1>
+	{% elif category == "watches" %}
+	<h1 align="center"><strong>Watches</strong></h1>
+	{% endif %}
+	<div class="container">
+		<div class="grid-container">
+			{% for result in results %}
+				<a href="{{ url_for('products', item_id=result[0]) }}">
+					<div class="grid-item">
+						<div class="grid-img-container">
+							<img class="grid-img" src="{{ url_for('static',filename=result[4]) }}"/><br>
+						</div>
+						{{ result[2] }}<br>
+						${{ result[6] }}
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock content %}

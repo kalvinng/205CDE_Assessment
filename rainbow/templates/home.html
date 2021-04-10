@@ -1,0 +1,53 @@
+{% extends "navbar.html" %}
+{% block content %}
+<br><br><br>
+<form align="center" class="home" action="/search/" method="GET">
+    <label for="hkey" class="searchproducts"><strong>Search for products</strong></label><br>
+    <input type="text" name="hkey" class="searchtext"><br><br>
+    <input type="submit" value="Search" class="searchbtn align-center" formmethod="get">
+</form>
+<br><br><br>
+<div class="container">
+	<div id="demo" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+
+		<!-- The slideshow -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="/static/images/category-1.jpg" alt="category-1" width="1100" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="/static/images/category-2.jpg" alt="category-2" width="1100" height="500">
+			</div>
+			<div class="carousel-item">
+				<img src="/static/images/exclusive.png" alt="exclusive" width="1100" height="500">
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	</div> <!-- End Carousel -->
+<br><br><br>
+<div class="container">
+	<p align="center" class="intro"><strong>Build Your Own Style!</strong></p>
+    <p class="intro">"You can have anything you want in life if you dress for it." - Edith Head.</p>
+	<p class="intro">To learn more, navigate to the <strong>About</strong> page by clicking Learn More button.</p>
+	<p class="intro">View products in different categories or search for products you want. Login an account by hovering on the Account tab, then add products into a shopping cart. View your shopping cart list and place your order. You can view your order lists for references.</p>
+	<p class="intro">If you don't have an account, you sign up and buy products. Create an account to start placing your orders.</p>
+	<p class="intro">Should you have any questions, navigate to the <strong>Contact</strong> page by clicking Keep In Touch button.</p> 
+	<div class="card-body" align="center">
+		<a href="/contact" class="btn btn-primary btn-lg">Keep In Touch</a>
+		<a href="/about" class="btn btn-success btn-lg">Learn More</a>
+	</div>
+</div>
+{% endblock content %}
